@@ -14,7 +14,7 @@ matrix:
   fast_finish: true
 
 before_install:
-  - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git";
+  - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git"';
 
 notifications:
   email: false
