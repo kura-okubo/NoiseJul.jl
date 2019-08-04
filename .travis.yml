@@ -14,11 +14,19 @@ notifications:
   email: false
 after_success:
   - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
+
+before_install:
+  - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git"
+
 jobs:
   include:
     - stage: Documentation
       julia: 1.1
-      script: julia --project=docs -e '
+      script:
+
+        - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git"
+
+        - julia --project=docs -e '
           using Pkg;
           Pkg.develop(PackageSpec(path=pwd()));
           Pkg.instantiate();
