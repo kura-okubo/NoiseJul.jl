@@ -10,7 +10,6 @@ Each document can be found in their github repository.
 - "IO" => "SeisIO",
 - "Noise" => "SeisNoise",
 - "Download" => "https://github.com/kura-okubo/SeisDownload",
-- "Convert" => "https://github.com/xtyangpsp/SeisConvert.jl.git",
 - #currently NOT available "Xcorrelation" => "https://github.com/jaredbryan881/SeisXcorrelation.jl",
 - "RemoveEQ" => "https://github.com/kura-okubo/SeisRemoveEQ.jl",
 - "Beamforming" => "https://github.com/kura-okubo/SeisBeamforming.jl.git")
@@ -44,15 +43,6 @@ module Download
 using SeisDownload
 for n in names(SeisDownload, all=true)
     if Base.isidentifier(n) && n ∉ (Symbol(SeisDownload), :eval)
-        eval(Expr(:export, n))
-    end
-end
-end
-
-module Convert
-using SeisConvert
-for n in names(SeisConvert, all=true)
-    if Base.isidentifier(n) && n ∉ (Symbol(SeisConvert), :eval)
         eval(Expr(:export, n))
     end
 end
