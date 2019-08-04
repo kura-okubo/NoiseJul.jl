@@ -14,10 +14,10 @@ matrix:
   fast_finish: true
 
 before_install:
-  - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git"';
-  - julia -e 'using Pkg; Pkg.pkg"add https://github.com/kura-okubo/SeisDownload.jl.git"';
-  - julia -e 'using Pkg; Pkg.pkg"add https://github.com/kura-okubo/SeisRemoveEQ.jl.git"';
-  - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/https://github.com/kura-okubo/SeisBeamforming.jl.git"';
+  - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git
+      https://github.com/kura-okubo/SeisDownload.jl.git
+      https://github.com/kura-okubo/SeisRemoveEQ.jl.git
+      https://github.com/kura-okubo/SeisBeamforming.jl.git"';
 
 notifications:
   email: false
@@ -34,11 +34,10 @@ jobs:
                                     Pkg.develop(PackageSpec(path=pwd()));
                                     Pkg.instantiate();
                                     Pkg.build("NoiseJul")'
-        - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git";
-          julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git"';
-          julia -e 'using Pkg; Pkg.pkg"add https://github.com/kura-okubo/SeisDownload.jl.git"';
-          julia -e 'using Pkg; Pkg.pkg"add https://github.com/kura-okubo/SeisRemoveEQ.jl.git"';
-          julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/https://github.com/kura-okubo/SeisBeamforming.jl.git"';
+        - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git
+              https://github.com/kura-okubo/SeisDownload.jl.git
+              https://github.com/kura-okubo/SeisRemoveEQ.jl.git
+              https://github.com/kura-okubo/SeisBeamforming.jl.git"';
           cd(Pkg.dir("NoiseJul")); Pkg.add("Documenter"); include(joinpath("docs", "make.jl"))'
 
       after_success: skip
