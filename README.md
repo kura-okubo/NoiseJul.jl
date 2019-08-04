@@ -50,5 +50,13 @@ From the Julia command prompt:
 
    Author: [Kurama Okubo](https://github.com/kura-okubo)
 
+# Example
+
+`S = NoiseJul.IO.SeisData()`
+
+`F = NoiseJul.Noise.FFTData()`
+
+More information can be found in each github repository.
+
 ---
 Copyright (c) 2019 Harvard University Earthquake Seismology Group. All Rights Reserved.
