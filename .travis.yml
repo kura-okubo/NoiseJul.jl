@@ -19,6 +19,7 @@ before_install:
       https://github.com/jaredbryan881/SeisXcorrelation.jl.git
       https://github.com/kura-okubo/SeisRemoveEQ.jl.git
       https://github.com/kura-okubo/SeisBeamforming.git"';
+  - julia -e 'using Pkg; Pkg.pkg"add Test"';
 
 notifications:
   email: false
