@@ -19,7 +19,11 @@ From the Julia command prompt:
 !!! note
       If you have an error when adding NoiseJul, try
 
+<<<<<<< HEAD
 > using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git https://github.com/kura-okubo/SeisDownload.jl.git https://github.com/jaredbryan881/SeisXcorrelation.jl.git https://github.com/kura-okubo/SeisRemoveEQ.jl.git https://github.com/kura-okubo/SeisBeamforming.git";
+=======
+> 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git https://github.com/kura-okubo/SeisDownload.jl.git https://github.com/jaredbryan881/SeisXcorrelation.jl.git https://github.com/kura-okubo/SeisRemoveEQ.jl.git https://github.com/kura-okubo/SeisBeamforming.git";'
+>>>>>>> 049ac93c53e86dfd0904632a474c2738b00d08d5
 
 !!! note
 
