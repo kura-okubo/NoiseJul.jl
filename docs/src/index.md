@@ -11,6 +11,12 @@ From the Julia command prompt:
 4. Type `using NoiseJul`
 
 !!! note
+      If you have an error when adding NoiseJul, try
+
+> 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git https://github.com/kura-okubo/SeisDownload.jl.git https://github.com/jaredbryan881/SeisXcorrelation.jl.git https://github.com/kura-okubo/SeisRemoveEQ.jl.git https://github.com/kura-okubo/SeisBeamforming.git";'
+
+
+!!! note
 
       Since it imports large number of submodules, precompile process takes a minute.
 
