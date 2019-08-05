@@ -32,15 +32,21 @@ jobs:
       julia: 1.1
       script:
 
-        - julia --project=docs/ -e 'using Pkg;
-                                    Pkg.develop(PackageSpec(path=pwd()));
-                                    Pkg.instantiate();
-                                    Pkg.build("NoiseJul")'
         - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git
               https://github.com/kura-okubo/SeisDownload.jl.git
               https://github.com/jaredbryan881/SeisXcorrelation.jl.git
               https://github.com/kura-okubo/SeisRemoveEQ.jl.git
               https://github.com/kura-okubo/SeisBeamforming.git"';
-          cd(Pkg.dir("NoiseJul")); Pkg.add("Documenter"); include(joinpath("docs", "make.jl"))'
+              julia --project=docs/ -e 'using Pkg;
+                                    Pkg.develop(PackageSpec(path=pwd()));
+                                    Pkg.instantiate();
+                                    Pkg.build("NoiseJul")'
+
+        - julia -e 'using Pkg; Pkg.pkg"add https://github.com/xtyangpsp/SeisConvert.jl.git
+              https://github.com/kura-okubo/SeisDownload.jl.git
+              https://github.com/jaredbryan881/SeisXcorrelation.jl.git
+              https://github.com/kura-okubo/SeisRemoveEQ.jl.git
+              https://github.com/kura-okubo/SeisBeamforming.git"';
+              cd(Pkg.dir("NoiseJul")); Pkg.add("Documenter"); include(joinpath("docs", "make.jl"))'
 
       after_success: skip
