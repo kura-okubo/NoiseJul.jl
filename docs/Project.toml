@@ -1,8 +1,0 @@
-[deps]
-Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
-NoiseJul = "0423bd86-b6d2-11e9-05d5-e96651daa1f8"
-SeisBeamforming = "c872090a-913f-11e9-2a50-4b83414f27c6"
-SeisConvert = "2da01664-975d-11e9-136d-b1577e504ac3"
-SeisDownload = "3c555a86-8617-11e9-35db-4175452cb573"
-SeisRemoveEQ = "ee8e518e-a107-11e9-1e00-0b6f0be20652"
-SeisXcorrelation = "f575b828-86f4-11e9-2d31-dfa2128ce4de"
